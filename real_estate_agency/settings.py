@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-
+    'phonenumber_field',
     'property.apps.PropertyConfig',
 ]
 
@@ -102,3 +102,5 @@ STATIC_URL = '/static/'
 DATABASES = {
     'default': dj_database_url.parse(os.getenv("DATABASE", "sqlite:///db.sqlite3")),
 }
+
+PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
